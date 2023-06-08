@@ -50,10 +50,7 @@ public class RestHelper {
         try {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
             int responseCode = response.statusCode();
-            System.out.println("Response code: " + responseCode);
-
-            String responseBody = response.body();
-            return responseBody;
+            return response.body();
 
         } catch (IOException e) {
             e.printStackTrace();
