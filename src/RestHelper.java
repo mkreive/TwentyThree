@@ -41,7 +41,6 @@ public class RestHelper {
 
     public static String getResponseNewWay(String address) {
         HttpClient client = HttpClient.newHttpClient(); // sukuriam klienta, kreipsis i API
-
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(address))
                 .GET()
